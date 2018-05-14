@@ -25,6 +25,7 @@ class SearchController extends Controller
     }
 
     public function see($id){
-        return view("search.product")
+        $products  =  DB::table('choices')->orWhere('id', '=', $id)->get();
+        return view("search.product", compact('products'));
     }
 }

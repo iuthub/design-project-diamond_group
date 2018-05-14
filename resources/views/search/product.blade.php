@@ -18,22 +18,15 @@ Ecommerce
            {{ csrf_field() }}
            	 <div class="media" style="margin-left: 40px;">
 				<div class="media-left" style="margin-top: 30px;">
-					<a href="{{url('/search/{$product->id}')}}">
-						<img src="{{URL::to('src\product_images\6.jpg')}}" alt="">
-					</a>
+					<img style="width: 250px; height: 250px;" src="{{URL::to('src\product_images\6.jpg')}}" alt="">
 				</div>
 				<div class="media-body" style="margin: 20px;">
-					<h3 class="media-heading">{{$product->products}}</h3>
-					<p> {{$product->description}} </p>
+					<h3 class="media-heading">{{$product->products}} $ {{ $product->price }}</h3>
+					<p> {{$product->description}} <h4>But this product this is designed for you</h4> </p>
 				</div>
             </div>
             @endforeach
         </div>
     </div>
-    <div class="row">
-    	<div class="col-md-12">
-        	{{ $products->links() }}
-    	</div>
-	</div>
 </div>
 @endsection

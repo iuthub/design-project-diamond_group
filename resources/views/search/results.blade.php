@@ -19,7 +19,7 @@ Ecommerce
            {{ csrf_field() }}
            	 <div class="media" style="margin-left: 40px;">
 				<div class="media-left" style="margin-top: 30px;">
-					<a href="{{url('/search/{$product->id}')}}">
+					<a href="/search/{{ $product->id }}">
 						<img src="{{URL::to('src\product_images\6.jpg')}}" alt="">
 					</a>
 				</div>
