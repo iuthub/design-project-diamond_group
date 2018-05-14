@@ -15,8 +15,7 @@ class ProductTableSeeder extends Seeder
           'imagePath' => 'src\product_images\1.jpg',
           'title' => 'Item1',
           'description' => 'Super cool - at least as a child.',
-          'price' => 17,
-          'category'=> 'category 5'
+          'price' => 17
         ]);
         $product->save();
 
@@ -24,8 +23,7 @@ class ProductTableSeeder extends Seeder
           'imagePath' => 'src\product_images\2.jpg',
           'title' => 'Item2',
           'description' => 'd tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa',
-          'price' => 18,
-          'category'=> 'category 3'
+          'price' => 18
         ]);
         $product->save();
 
@@ -33,8 +31,7 @@ class ProductTableSeeder extends Seeder
           'imagePath' => 'src\product_images\3.jpg',
           'title' => 'Item3',
           'description' => 'Super cool - at least as a child.',
-          'price' => 33,
-          'category'=> 'category 2'
+          'price' => 33
         ]);
         $product->save();
 
@@ -42,8 +39,7 @@ class ProductTableSeeder extends Seeder
           'imagePath' => 'src\product_images\4.jpg',
           'title' => 'Item4',
           'description' => 't. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          'price' => 777,
-          'category'=> 'category 1'
+          'price' => 777
         ]);
         $product->save();
 
@@ -51,8 +47,7 @@ class ProductTableSeeder extends Seeder
           'imagePath' => 'src\product_images\5.jpg',
           'title' => 'Item5',
           'description' => 'Super cool - at least as a child.',
-          'price' => 111,
-          'category'=> 'category 2'
+          'price' => 111
         ]);
         $product->save();
 
@@ -60,8 +55,7 @@ class ProductTableSeeder extends Seeder
           'imagePath' => 'src\product_images\6.jpg',
           'title' => 'Item6',
           'description' => 'Super cool - at least as a child.',
-          'price' => 70,
-          'category'=> 'category 1'
+          'price' => 70
         ]);
         $product->save();
 
@@ -69,8 +63,7 @@ class ProductTableSeeder extends Seeder
           'imagePath' => 'src\product_images\7.jpg',
           'title' => 'Item7',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo',
-          'price' => 240,
-          'category'=> 'category 1'
+          'price' => 240
         ]);
         $product->save();
 

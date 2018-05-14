@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Product;
+use App\Address;
+
 use Illuminate\Http\Request;
 use Session;
 
@@ -72,6 +74,17 @@ class ProductController extends Controller
     $oldCart = Session::get('cart');
     $cart = new Cart($oldCart);
     return view('pages.shopping-cart', ['products' => $cart->items, 'totalQty' => $cart->totalQty, 'totalPrice' => $cart->totalPrice]);
+  }
+
+  public function store(Request $request){
+    $this->validate($request,[
+      'firstname' => 'required',
+      'lastname' => 'required',
+      'address' => 'required',
+      'phonenumber' => 'required',
+    ]);
+    return back();
+
   }
 
 }

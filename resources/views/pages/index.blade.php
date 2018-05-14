@@ -15,7 +15,7 @@ Ecommerce
 
 @section('content')
 <main role="main">
-  <div  class ="jumbotron">
+  <div class="jumbotron">
     <div class="row pb-3">
 
       <div class="col-md-3"><!--Categories_Section-->
@@ -24,9 +24,9 @@ Ecommerce
             <h3>CATEGORY</h4>
               <ul class="list-group">
                 @for($i=1; $i<3; $i++)
-                <li class="list-group-item"><a href="#">WISH LIST {{$i}}</a></li>
+                <li class="list-group-item"><a href="#">category {{$i}}</a></li>
                 @endfor
-                <li class="list-group-item list-group-item-success">Books</li>
+                <li class="list-group-item list-group-item-success">Dapibus</li>
                 <li class="list-group-item list-group-item-info">Cras sit</li>
                 <li class="list-group-item list-group-item-warning">Porta ac</li>
                 <li class="list-group-item list-group-item-danger">Vestibulum</li>
@@ -44,8 +44,8 @@ Ecommerce
                 <li data-target="#myCarousel" data-slide-to="2"></li>
               </ol>
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="first-slide" src="{{URL::to('src\carousel_images\1.jpg')}}" alt="First slide">
+                <div class="carousel-item active" style="max-height: 400px">
+                  <img class="first-slide" src="{{url('images', $products[0]->imagePath)}}" alt="First slide">
                   <div class="container">
                     <div class="carousel-caption text-left">
                       <h1>Example headline.</h1>
@@ -54,8 +54,8 @@ Ecommerce
                     </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <img class="second-slide" src="{{URL::to('src\carousel_images\2.jpg')}}" alt="Second slide">
+                <div class="carousel-item" style="max-height: 400px">
+                  <img class="second-slide" src="{{url('images', $products[1]->imagePath)}}" alt="Second slide">
                   <div class="container">
                     <div class="carousel-caption">
                       <h1>Another example headline.</h1>
@@ -64,8 +64,8 @@ Ecommerce
                     </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <img class="third-slide" src="{{URL::to('src\carousel_images\3.jpg')}}" alt="Third slide">
+                <div class="carousel-item" style="max-height: 400px">
+                  <img class="third-slide" src="{{url('images', $products[2]->imagePath)}}" alt="Third slide">
                   <div class="container">
                     <div class="carousel-caption text-right">
                       <h1>One more for good measure.</h1>
@@ -95,22 +95,21 @@ Ecommerce
             <div class="my-div px-2">
               <h2 class="title text-center">HOT DEALS</h2>
               <div class="card-header">
-                <h4 class="my-0 font-weight-normal">{{$products[4]->title}}</h4>
+                <h4 class="my-0 font-weight-normal">{{$products[1]->title}}</h4>
               </div>
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" style="height: 240px" src="{{URL::to($products[4]->imagePath)}}" alt="product">
+                <img class="card-img-top" style="height: 240px" src="{{url('images', $products[1]->imagePath)}}" alt="product">
                 <div class="card-body">
-                  <p class="card-text" style="height: 120px; overflow: hidden">{{$products[4]->description}}</p>
+                  <p class="card-text" style="height: 120px; overflow: hidden">{{$products[1]->description}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       @guest
                       @else
-                      <a href="{{route('product.addToCart', ['id' =>$products[4]->id])}}" class="btn btn-success float-right" role="button">Add to Cart</a>
+                      <a href="{{route('product.addToCart', ['id' =>$products[1]->id])}}" class="btn btn-success float-right" role="button">Add to Cart</a>
                       @endguest
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div>
-                    <small class="text-muted">$ {{$products[4]->price}}</small>
+                    <small class="text-muted">$ {{$products[1]->price}}</small>
                   </div>
                 </div>
               </div>
@@ -127,7 +126,7 @@ Ecommerce
                     <h4 class="my-0 font-weight-normal">{{$product->title}}</h4>
                   </div>
                   <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" style="height: 240px" src="{{URL::to($product->imagePath)}}" alt="product">
+                    <img class="card-img-top" style="height: 240px" src="{{url('images', $product->imagePath)}}" alt="product">
                     <div class="card-body">
                       <p class="card-text" style="height: 120px; overflow: hidden">{{$product->description}}</p>
                       <div class="d-flex justify-content-between align-items-center">
@@ -137,7 +136,6 @@ Ecommerce
                           <a href="{{route('product.addToCart', ['id' =>$product->id])}}" class="btn btn-success float-right" role="button">Add to Cart</a>
                           @endguest
                           <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                         </div>
                         <small class="text-muted">$ {{$product->price}}</small>
                       </div>

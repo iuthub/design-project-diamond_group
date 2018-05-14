@@ -1,3 +1,11 @@
+Diamond_Group
+U1610042 Azizbek Samatov
+U1610131 Madiyor Abdukhashimov
+U1610213 Shahzod Urinboev
+U1610216 Shakhzod Khayitboev
+U1610263 Saidamir Botirov
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
