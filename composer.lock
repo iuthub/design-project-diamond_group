@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea4456209c89a8b8f97854ff351cf71d",
+    "content-hash": "cbc2112817e144c226f349b3dec3e9d0",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -604,74 +604,6 @@
             "time": "2017-12-18T16:25:11+00:00"
         },
         {
-            "name": "laravelcollective/html",
-            "version": "v5.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "04c596a69975b901f2223eb6eb4adf55354121c2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/04c596a69975b901f2223eb6eb4adf55354121c2",
-                "reference": "04c596a69975b901f2223eb6eb4adf55354121c2",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "5.5.*",
-                "illuminate/routing": "5.5.*",
-                "illuminate/session": "5.5.*",
-                "illuminate/support": "5.5.*",
-                "illuminate/view": "5.5.*",
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "illuminate/database": "5.5.*",
-                "mockery/mockery": "~0.9.4",
-                "phpunit/phpunit": "~5.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.5-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Collective\\Html\\HtmlServiceProvider"
-                    ],
-                    "aliases": {
-                        "Form": "Collective\\Html\\FormFacade",
-                        "Html": "Collective\\Html\\HtmlFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Collective\\Html\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                },
-                {
-                    "name": "Adam Engebretson",
-                    "email": "adam@laravelcollective.com"
-                }
-            ],
-            "description": "HTML and Form Builders for the Laravel Framework",
-            "homepage": "https://laravelcollective.com",
-            "time": "2018-03-24T00:39:21+00:00"
-        },
-        {
             "name": "league/flysystem",
             "version": "1.0.41",
             "source": {
@@ -928,6 +860,52 @@
                 "time"
             ],
             "time": "2017-01-16T07:55:07+00:00"
+        },
+        {
+            "name": "nicolaslopezj/searchable",
+            "version": "1.9.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nicolaslopezj/searchable.git",
+                "reference": "c067f11a993c274c9da0d4a2e70ca07614bb92da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nicolaslopezj/searchable/zipball/c067f11a993c274c9da0d4a2e70ca07614bb92da",
+                "reference": "c067f11a993c274c9da0d4a2e70ca07614bb92da",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "illuminate/database": "4.2.x|~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nicolaslopezj\\Searchable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Lopez",
+                    "email": "nicolaslopezj@me.com"
+                }
+            ],
+            "description": "Eloquent model search trait.",
+            "keywords": [
+                "database",
+                "eloquent",
+                "laravel",
+                "model",
+                "search",
+                "searchable"
+            ],
+            "time": "2017-08-09T04:37:57+00:00"
         },
         {
             "name": "nikic/php-parser",

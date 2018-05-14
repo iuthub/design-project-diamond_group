@@ -32,12 +32,29 @@ Shopping Cart
             <small class="text-muted">{{$product['item']['description']}}</small>
 
             <div class="btn-group">
-              <a class="btn btn-sm btn-outline-secondary" href="{{route('product.reduceByOne', ['id' => $product['item']['id']])}}">-</a>
-              <a class="btn btn-sm btn-outline-secondary" href="{{route('product.remove', ['id' => $product['item']['id']])}}">Delete</a>
+              <a class="dropdown-item" href="{{route('product.reduceByOne', ['id' => $product['item']['id']])}}">Reduce by 1</a>
+              <a class="dropdown-item" href="{{route('product.remove', ['id' => $product['item']['id']])}}">Reduce All</a>
+              <a class="btn btn-sm btn-outline-secondary">+</a>
+              <a class="btn btn-sm btn-outline-secondary">-</a>
+              <a class="btn btn-sm btn-outline-secondary">Delete</a>
             </div>
           </div>
         </li>
         @endforeach
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Next product</h6>
+            <small class="text-muted">Brief description</small>
+          </div>
+          <span class="text-muted">$8</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success">
+            <h6 class="my-0">Promo code</h6>
+            <small>EXAMPLECODE</small>
+          </div>
+          <span class="text-success">-$5</span>
+        </li>
         <li class="list-group-item d-flex justify-content-between">
           <span>Total (USD)</span>
           <strong>${{$totalPrice}}</strong>
@@ -55,20 +72,18 @@ Shopping Cart
     </div>
     <div class="col-md-7 order-md-1">
       <h4 class="mb-3">Billing address</h4>
-
       <form class="needs-validation" novalidate>
         <div class="row">
-
           <div class="col-md-6 mb-3">
-             <label for="firstname">First name</label>
-            <input type="text" class="form-control" id="firstname" placeholder="" value="" required>
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="lastname">Last name</label>
-            <input type="text" class="form-control" id="lastname" placeholder="" value="" required>
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
             </div>
@@ -76,7 +91,7 @@ Shopping Cart
         </div>
 
         <div class="mb-3">
-           <label for="address">Address</label>
+          <label for="address">Address</label>
           <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
           <div class="invalid-feedback">
             Please enter your shipping address.
@@ -86,11 +101,47 @@ Shopping Cart
 
         <hr class="mb-4">
 
-        <div class="mb-3">
-          <label for="phonenumber">Phone Number</label>
-          <input type="text" class="form-control" id="phonenumber" placeholder="99897 7000000" required>
-          <div class="invalid-feedback">
-            Please enter your Phone number.
+        <h4 class="mb-3">Payment</h4>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name">Name on card</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+            <small class="text-muted">Full name as displayed on card</small>
+            <div class="invalid-feedback">
+              Name on card is required
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number">Credit card number</label>
+            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+            <div class="invalid-feedback">
+              Credit card number is required
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration-month">Expiration Month</label>
+            <input type="text" class="form-control" id="cc-expiration-month" placeholder="" required>
+            <div class="invalid-feedback">
+              Expiration Month required
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration-year">Expiration Year</label>
+            <input type="text" class="form-control" id="cc-expiration-year" placeholder="" required>
+            <div class="invalid-feedback">
+              Expiration Year required
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-cvv">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+            <div class="invalid-feedback">
+              Security code required
+            </div>
           </div>
         </div>
         <hr class="mb-4">
