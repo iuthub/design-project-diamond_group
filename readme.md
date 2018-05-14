@@ -1,4 +1,3 @@
-
 Diamond_Group
 U1610042 Azizbek Samatov
 U1610131 Madiyor Abdukhashimov
@@ -6,21 +5,6 @@ U1610213 Shahzod Urinboev
 U1610216 Shakhzod Khayitboev
 U1610263 Saidamir Botirov
 
-Project description: Upay is an e-commercial website and it serves for all people who are registered and 
-who are not. Now it does not have many facilities but there will be used great search engines like 
-“Allgolia”. Now there is used simple search tips through database. It provides many types of products 
-and payment system was implemented. It’s responsive and provides different user types so guest, user 
-and admin. Admin can delete and upload products while user can buy them. Additionally guest user can 
-just look through all elements. For guess user read only part is assigned.
-
-Madiyor Abdukhashimov - Searching and product view part and back-end
-Aziz Samatov - Front-end 
-Saidamir Botirov - Back-end part
-Shakhzod Khayitboev and Shakhzod Urinboev Admin side
-
-Mainly back-end has been done by Shakhzod Urinboev, Madiyor Abdukhashimov and Saidamir Botirov
-
-link -> "report/report.pdf"
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
